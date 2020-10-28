@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Dropdown from './Dropdown';
+import Header from './Header.js';
+import Footer from './Footer.js';
 
-function App() {
+export default class App extends React.Component {
+  state = {
+    image: '',
+    name: '',
+    description: '',
+    attack: '',
+    defense: '',
+}
+
+handleChangeType_1 = e => {
+    this.setState({
+        description: e.target.value,
+    });
+}
+handleChangeType_1 = e => {
+  this.setState({
+      attack: e.target.value,
+  });
+}
+handleChangeType_1 = e => {
+  this.setState({
+      defense: e.target.value,
+  });
+}
+
+render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Header />
+<Dropdown />
+<Footer />
+
+
+
     </div>
   );
 }
-
-export default App;
+}

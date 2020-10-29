@@ -1,7 +1,6 @@
 
-export default this.props.pokemonData = [
+export const pokemonData = [
     {
-       '_id':'5cef3501ef6005a77cd4fd17',
        'pokemon':'bulbasaur',
        'id':1,
        'species_id':1,
@@ -34,7 +33,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/bulbasaur'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd19',
        'pokemon':'ivysaur',
        'id':2,
        'species_id':2,
@@ -67,7 +65,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/ivysaur'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd1a',
        'pokemon':'charmander',
        'id':5,
        'species_id':4,
@@ -100,7 +97,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/charmander'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd1b',
        'pokemon':'charmeleon',
        'id':6,
        'species_id':5,
@@ -133,7 +129,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/charmeleon'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd1c',
        'pokemon':'charizard',
        'id':7,
        'species_id':6,
@@ -166,7 +161,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/charizard'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd1f',
        'pokemon':'squirtle',
        'id':10,
        'species_id':7,
@@ -199,7 +193,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/squirtle'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd20',
        'pokemon':'wartortle',
        'id':11,
        'species_id':8,
@@ -232,7 +225,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/wartortle'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd21',
        'pokemon':'blastoise',
        'id':12,
        'species_id':9,
@@ -265,7 +257,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/blastoise'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd23',
        'pokemon':'caterpie',
        'id':14,
        'species_id':10,
@@ -298,7 +289,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/caterpie'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd24',
        'pokemon':'metapod',
        'id':15,
        'species_id':11,
@@ -331,7 +321,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/metapod'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd25',
        'pokemon':'beedrill',
        'id':19,
        'species_id':15,
@@ -364,7 +353,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/beedrill'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd26',
        'pokemon':'weedle',
        'id':17,
        'species_id':13,
@@ -397,7 +385,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/weedle'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd27',
        'pokemon':'kakuna',
        'id':18,
        'species_id':14,
@@ -430,7 +417,6 @@ export default this.props.pokemonData = [
        'pokedex':'http://www.pokemon.com/us/pokedex/kakuna'
     },
     {
-       '_id':'5cef3501ef6005a77cd4fd29',
        'pokemon':'pidgey',
        'id':21,
        'species_id':16,

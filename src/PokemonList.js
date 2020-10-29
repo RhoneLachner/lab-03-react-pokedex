@@ -57,6 +57,5 @@ export default class PokemonList extends Component {
             </div>
             
             )
-            
     }
 }

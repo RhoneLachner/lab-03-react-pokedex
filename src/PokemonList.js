@@ -12,8 +12,9 @@ export default class PokemonList extends Component {
 
         .sort((item) => {
 
-
         })
+
+        
 
     //     const filtered = this.props.pokemonDataProps.filter((id) => {
     //     if (!this.props.pokemon) return true;
@@ -25,11 +26,11 @@ export default class PokemonList extends Component {
     //         if (id.url_image === +this.props.url_image) return true;
     //         return false;
     // })
-    //     .filter((id) => {
-    //         if (!this.props.type_1) return true;
-    //         if (id.type_1 === +this.props.type_1) return true;
-    //         return false;
-    // })
+        .filter((id) => {
+            if (!this.props.type_1) return true;
+            if (id.type_1 === +this.props.type_1) return true;
+            return false;
+    })
     //     .filter((id) => {
     //         if (!this.props.attack) return true;
     //         if (id.attack === +this.props.attack) return true;

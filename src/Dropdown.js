@@ -3,31 +3,23 @@ import PokemonList from './PokemonList.js';
 
 
 
-export default class Dropdown extends Component {
+export default class Dropdown extends React.Component {
     render() {
         return (
-            <div>
+            <div className='drop-down'>
+            <select onChange={this.props.handleChangeDescription}>
+                <option value=''>Show all types</option>
+                <option value='grass'>Grass</option>
+                <option value='fire'>fire</option>
+                <option value='water'>water</option>
+                <option value='bug'>bug</option>
+                <option value='normal'>normal</option>
+            </select>
 
 
-                
-            {/* <select onChange={this.handlerSearchChange} className="dropdown">
+</div>  
+ 
             
-            {this.props.pokemonDataProp.map((item) => {
-                return <option value={item.title}>{item.pokemon}</option>
-            })}
-             </select>
-
-             <select onChange={this.handleChange} className="dropdown2">
-
-             {this.props.pokemonDataProp.map((item) => {
-                return <option value={item.t}>{item.pokemon}</option>
-            })}
-             </select>
-
-            
-             </select> */}
-
-            </div>
         )
     }
 }

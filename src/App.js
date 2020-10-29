@@ -25,9 +25,16 @@ handleSearchChange = e => {
 console.log(e.target.value)
 
 }
-// handleChangeType_1 = e => {
+
+
+handleChangeDescription = (e) => {
+  this.setState({
+    description: e.target.value,
+  });
+}
+// handleChangeDescription = (e) => {
 //   this.setState({
-//       attack: e.target.value,
+//       description: e.target.value,
 //   });
 // }
 // handleChangeType_1 = e => {
@@ -40,12 +47,13 @@ render() {
   return (
     <div className="App">
 <Header />
-<Search handleSearchChange={this.handleSearchChange}  />
+<Search handleSearchChange={this.handleSearchChange} />
 <PokemonList
  searchTerm={this.state.searchTerm} 
  pokemonDataProp={pokemonData}
  />
-{/* <Dropdown pokemonDataProp={pokemonData}/> */}
+<Dropdown 
+handleChangeDescription={this.handleChangeDescription} />
 
 <Footer />
 

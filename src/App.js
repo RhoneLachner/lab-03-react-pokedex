@@ -1,25 +1,63 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Dropdown from './Dropdown';
+import Header from './Header.js';
+import Footer from './Footer.js';
+import Search from './Search.js';
+import { pokemonData } from './data.js';
+import PokemonList from './PokemonList';
 
-function App() {
+export default class App extends React.Component {
+  state = {
+    searchTerm: '',
+    image: '',
+    name: '',
+    description: '',
+    attack: '',
+    defense: '',
+}
+
+
+handleSearchChange = e => {
+    this.setState({
+        searchTerm: e.target.value,
+    });
+console.log(e.target.value)
+
+}
+
+
+handleChangeDescription = (e) => {
+  this.setState({
+    description: e.target.value,
+  });
+}
+// handleChangeDescription = (e) => {
+//   this.setState({
+//       description: e.target.value,
+//   });
+// }
+// handleChangeType_1 = e => {
+//   this.setState({
+//       defense: e.target.value,
+//   });
+// }
+
+render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Header />
+<Search handleSearchChange={this.handleSearchChange} />
+<PokemonList
+ searchTerm={this.state.searchTerm} 
+ pokemonDataProp={pokemonData}
+ />
+<Dropdown 
+handleChangeDescription={this.handleChangeDescription} />
+
+<Footer />
+
     </div>
   );
 }
-
-export default App;
+}

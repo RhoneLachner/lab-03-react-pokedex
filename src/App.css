@@ -4,7 +4,7 @@
   pointer-events: none;
 }
 body {
-  background-color: rgb(212, 223, 226);
+  background-color: rgb(252, 83, 71);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +15,7 @@ body {
 
 .App {
   text-align: center;
-  background-color: rgb(170, 203, 214);
+  background-color: rgb(152, 219, 240);
 }
 
 /* .pokemonItems {
@@ -23,12 +23,24 @@ display: grid;
 grid-template-columns: auto;
 } */
 
+.PokemonList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
+.pokemon-items {
+  width: 150px;
+  height: 300px;
+  border: solid;
+  border-color: black;
+  border: black;
+  margin: 20px;
+  
+}
 
 img {
   height: 150px;
-
-  
 }
 
 h1{
@@ -45,13 +57,27 @@ h3 {
 
 input {
   width: 200px;
+  border-color: yellow;
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+select {
+  border-color: yellow ;
+}
+
+link {
+  font-size: 17px;
+  color: black;
+
 }
 
 .HeaderDiv {
   margin: 50px;
   font-size: 30px;
-  background-color: rgba(142, 151, 159, 0.68);
-  height: 150px;
+  background-color: rgba(98, 166, 255, 0.863);
+  height: 100px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,6 +87,7 @@ input {
   border-width: 5px;
   border-color: rgb(10, 10, 10);
   }
+
 ul {
   align-self: center;
   align-content: center;
@@ -70,7 +97,7 @@ ul {
 }  
 
 li {
-  font-size: 12px;
+  font-size: 14px;
   list-style: none;
   align-content: center;
   margin-right: 35px;
@@ -87,8 +114,6 @@ li {
     align-items: center;
     justify-content: center;
   }
-
-
 
 .App-link {
   color: #61dafb;

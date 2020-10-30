@@ -16,31 +16,36 @@ export default class ListPage extends React.Component {
         description: '',
         attack: '',
         defense: '',
+        order: '',
         list: []
     }
     
     componentDidMount = async () => {
-        const data = await fetch.get('https://alchemy-pokedex.herokuapp.com/api/pokedex');
-        this.setState({ list : data.body.results }) 
-
+        this.fetchPokemon()
     }
-
+    fetchPokemon = async () => {
+        const data = await fetch.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${this.state.searchTerm}&sort=${this.state.description}&direction=${this.state.order}
+        `);
+        this.setState({ list : data.body.results }) 
+    }
 
 
     handleSearchChange = e => {
         this.setState({
             searchTerm: e.target.value,
         });
-    console.log(e.target.value)
     
     }
 
-    
-    handleChangeDescription = (e) => {
-      this.setState({
+    handleChangeDescription = async (e) => {
+    await this.setState({
         description: e.target.value,
       });
+      this.fetchPokemon()
+      console.log(e.target.value)
+      
     }
+
     handleChange = e => {
       this.setState({
         filter: e.target.value
@@ -49,6 +54,14 @@ export default class ListPage extends React.Component {
 
 
 
+    handleChangeOrder= async (e) => {
+        await this.setState({
+            order: e.target.value,
+          });
+          this.fetchPokemon()
+          console.log(e.target.value)
+          
+        }
 
   
     render() {
@@ -56,8 +69,11 @@ export default class ListPage extends React.Component {
           <div className="grid-stuff">
             <Search handleSearchChange={this.handleSearchChange} />
             <Dropdown 
+            handleChangeDescription={this.handleChangeDescription}
+
+            handleChangeOrder={this.handleChangeOrder}
              />
-            <PokemonList
+            <PokemonList className='pokemon-grid'
             searchTerm={this.state.searchTerm} 
             pokemonDataProp={this.state.list}
             />

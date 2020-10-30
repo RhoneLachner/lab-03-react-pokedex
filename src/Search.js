@@ -7,7 +7,7 @@ export default class Search extends Component {
             <div className='SearchDiv'>
                 <>
                 <input placeholder='Search Pokemon by Name' onChange={this.props.handleSearchChange}/>
-                <button onClick={this.handleClick}>🔍</button>
+                {/* <button onClick={this.handleClick}>🔍</button> */}
                 </>
             </div>
         )

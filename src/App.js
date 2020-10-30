@@ -1,37 +1,23 @@
+
+
 import React, {Component} from 'react';
-import './App.css';
-import Dropdown from './Dropdown';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  
+} from "react-router-dom";
+
 import Header from './Header.js';
 import Footer from './Footer.js';
-import Search from './Search.js';
-import { pokemonData } from './data.js';
-import PokemonList from './PokemonList';
+import ListPage from './ListPage.js';
+import HomePage from './HomePage.js';
+import FetchPage from './FetchPage';
+import './App.css';
 
 export default class App extends React.Component {
-  state = {
-    searchTerm: '',
-    image: '',
-    name: '',
-    description: '',
-    attack: '',
-    defense: '',
-}
+ 
 
-
-handleSearchChange = e => {
-    this.setState({
-        searchTerm: e.target.value,
-    });
-console.log(e.target.value)
-
-}
-
-
-handleChangeDescription = (e) => {
-  this.setState({
-    description: e.target.value,
-  });
-}
 // handleChangeDescription = (e) => {
 //   this.setState({
 //       description: e.target.value,
@@ -45,17 +31,31 @@ handleChangeDescription = (e) => {
 
 render() {
   return (
-    <div className="App">
-<Header />
-<Search handleSearchChange={this.handleSearchChange} />
-<PokemonList
- searchTerm={this.state.searchTerm} 
- pokemonDataProp={pokemonData}
- />
-<Dropdown 
-handleChangeDescription={this.handleChangeDescription} />
 
-<Footer />
+    <div className="App">
+      <Router>
+        <Header />
+        <Switch>
+        <Route
+        path='/'
+        exact
+        render={(routerProps) => <HomePage {...routerProps} />}
+        />
+        <Route 
+         path='/search'
+         exact
+         render={(routerProps) => <ListPage {...routerProps} />}
+         />
+         {/* <Route 
+         path='/fetch'
+         exact
+         render={(routerProps) => <FetchPage {...routerProps} />}
+          /> */}
+
+        </Switch>
+        <Footer />
+      </Router>
+        
 
     </div>
   );

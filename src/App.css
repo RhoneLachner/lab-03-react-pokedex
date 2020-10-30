@@ -32,7 +32,22 @@ body {
   border-width: 5px;
   border-color: rgb(10, 10, 10);
   }
-  
+ul {
+  align-self: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}  
+
+li {
+  font-size: 12px;
+  list-style: none;
+  align-content: center;
+  margin-right: 35px;
+}
+
+
   .FooterDiv {
     margin: 50px;
     font-size: 30px;

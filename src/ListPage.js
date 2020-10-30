@@ -5,6 +5,7 @@ import PokemonList from './PokemonList.js';
 import Search from './Search.js';
 import fetch from 'superagent';
 import { pokemonData } from './data.js';
+import './App.css';
 
 
 export default class ListPage extends React.Component {
@@ -45,6 +46,10 @@ export default class ListPage extends React.Component {
         filter: e.target.value
       });
     }
+
+
+
+
   
     render() {
         return (
@@ -92,7 +97,7 @@ export default class ListPage extends React.Component {
 
     //     console.log(data.body);
 
-    //     this.setState({ pokemon: data.body })
+    //     this.setState({ list: data.body })
 
     // }
 
@@ -115,9 +120,9 @@ export default class ListPage extends React.Component {
 //        <input onChange={this.handleChange} name="search" />
 //        <button onClick={this.handleClick}>🔍</button>
 
-//        <ul className="pokemon">
+//        <ul className="list">
 //            {
-//                this.state.pokemon.length && this.state.pokemon.map(pokemon => <li className="pokemon-item"> {pokemon.pokemon} </li >)
+//                this.state.list.length && this.state.list.map(list => <li className="list-item"> {list.list} </li >)
 //            }
 //        </ul>
 //    </main >

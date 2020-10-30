@@ -18,6 +18,10 @@ body {
   background-color: rgb(170, 203, 214);
 }
 
+img {
+  height: 200px;
+}
+
 .HeaderDiv {
   margin: 50px;
   font-size: 30px;

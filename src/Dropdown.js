@@ -7,19 +7,38 @@ export default class Dropdown extends React.Component {
     render() {
         return (
             <div className='drop-down'>
-            <select onChange={this.props.handleChangeDescription}>
-                <option value=''>Show all types</option>
-                <option value='grass'>Grass</option>
-                <option value='fire'>fire</option>
-                <option value='water'>water</option>
-                <option value='bug'>bug</option>
-                <option value='normal'>normal</option>
+            <select onChange={this.props.handleChangeOrder}>
+                <option value=''>Sort by... </option>
+                <option value='asc'>Ascending</option>
+                <option value='desc'>Descending</option>
+           
+            </select>
+            <select 
+            className='descriptiom-dropdown' 
+            defaultValue={this.props.selectedDescription} 
+            onChange={this.props.handleChangeDescription}
+            >
+                <option className='description-list-all' value=''>All Categories</option>
+                <option value ='pokemon'>Name A-Z or Z-A</option>
+                <option value='attack'>Attack</option>
+                <option value ='defense'>Defense</option>
+                <option value ='type_1'>Type</option>
+                
+            {/* {
+                getUniqueDescription(this.props.list).map((description, list) =>
+               <option className='description-list' value={description} key={list}>{description}</option> )
+            } */}
+
             </select>
 
-
-</div>  
+        </div>  
  
             
         )
     }
+
 }
+
+
+
+

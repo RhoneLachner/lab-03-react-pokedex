@@ -7,7 +7,7 @@ export default class Header extends Component {
         return (
             <div className='HeaderDiv'>
                 <span>
-                <h3>Pokedex</h3>
+                <h1>Pokedex</h1>
                 <ul>
                 <li>
                     <Link to="/">Home</Link>

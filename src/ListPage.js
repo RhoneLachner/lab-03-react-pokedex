@@ -1,9 +1,9 @@
 
 import React from 'react';
 import PokemonList from './PokemonList.js';
-// import Dropdown from './Dropown.js';
 import Search from './Search.js';
 import fetch from 'superagent';
+import Dropdown from './Dropdown.js';
 import { pokemonData } from './data.js';
 import './App.css';
 
@@ -55,8 +55,8 @@ export default class ListPage extends React.Component {
         return (
           <div className="grid-stuff">
             <Search handleSearchChange={this.handleSearchChange} />
-            {/* <Dropdown 
-            handleChangeDescription={this.handleChangeDescription} /> */}
+            <Dropdown 
+             />
             <PokemonList
             searchTerm={this.state.searchTerm} 
             pokemonDataProp={this.state.list}

@@ -18,8 +18,33 @@ body {
   background-color: rgb(170, 203, 214);
 }
 
+/* .pokemonItems {
+display: grid;
+grid-template-columns: auto;
+} */
+
+
+
 img {
-  height: 200px;
+  height: 150px;
+
+  
+}
+
+h1{
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+input {
+  width: 200px;
 }
 
 .HeaderDiv {

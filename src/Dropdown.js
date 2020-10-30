@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PokemonList from './PokemonList.js';
+import './App.css';
 
 
 

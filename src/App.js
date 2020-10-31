@@ -13,6 +13,9 @@ import Footer from './Footer.js';
 import ListPage from './ListPage.js';
 import HomePage from './HomePage.js';
 import FetchPage from './FetchPage';
+import PaginationPage from './PaginationPage';
+import DetailsPage from './DetailsPage.js';
+
 import './App.css';
 
 export default class App extends React.Component {
@@ -46,11 +49,21 @@ render() {
          exact
          render={(routerProps) => <ListPage className='pokemon-borders' {...routerProps} />}
          />
-         {/* <Route 
+         <Route 
          path='/fetch'
          exact
          render={(routerProps) => <FetchPage {...routerProps} />}
-          /> */}
+          />
+          <Route 
+         path='/pokemon/:id'
+         exact
+         render={(routerProps) => <DetailsPage {...routerProps} />}
+          />
+           <Route 
+         path='/pagination'
+         exact
+         render={(routerProps) => <PaginationPage {...routerProps} />}
+          />
 
         </Switch>
         <Footer />

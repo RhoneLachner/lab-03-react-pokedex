@@ -49,16 +49,16 @@ render() {
          exact
          render={(routerProps) => <ListPage className='pokemon-borders' {...routerProps} />}
          />
-         <Route 
+         {/* <Route 
          path='/fetch'
          exact
          render={(routerProps) => <FetchPage {...routerProps} />}
-          />
-          <Route 
-         path='/pokemon/:id'
+          /> */}
+          {/* <Route 
+         path='/details/:pokemon' 
          exact
          render={(routerProps) => <DetailsPage {...routerProps} />}
-          />
+          /> */}
            <Route 
          path='/pagination'
          exact

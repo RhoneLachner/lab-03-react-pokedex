@@ -54,11 +54,11 @@ render() {
          exact
          render={(routerProps) => <FetchPage {...routerProps} />}
           /> */}
-          {/* <Route 
+          <Route 
          path='/details/:pokemon' 
          exact
          render={(routerProps) => <DetailsPage {...routerProps} />}
-          /> */}
+          />
            <Route 
          path='/pagination'
          exact

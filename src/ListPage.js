@@ -129,22 +129,22 @@ export default class ListPage extends React.Component {
             />
 
           </div>
-{/* 
+
      <div>
-                {
+                {/* {
                 this.state.loading
-                ? 'loading!!!'
+                ? 'loading!!!' :
                 // what if i wanted an onClick handler inside of a map?
-                : this.state.pokemon.map(pokemon => 
+                : this.state.pokemon.list(pokemon => 
                         <div key={pokemon.pokemon}>
                             <p>{pokemon.pokemon}</p>
                             <img src={pokemon.url_image} alt={pokemon.pokemon} width="100" height="100"/>
                             <p>{pokemon.type_1}</p>
                         </div>
                         )
-                }
+                } */}
           
-          </div> */}
+          </div>
 
         </>
 

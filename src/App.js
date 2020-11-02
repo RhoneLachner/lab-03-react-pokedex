@@ -13,6 +13,9 @@ import Footer from './Footer.js';
 import ListPage from './ListPage.js';
 import HomePage from './HomePage.js';
 import FetchPage from './FetchPage';
+import PaginationPage from './PaginationPage';
+import DetailsPage from './DetailsPage.js';
+
 import './App.css';
 
 export default class App extends React.Component {
@@ -51,6 +54,16 @@ render() {
          exact
          render={(routerProps) => <FetchPage {...routerProps} />}
           /> */}
+          {/* <Route 
+         path='/details/:pokemon' 
+         exact
+         render={(routerProps) => <DetailsPage {...routerProps} />}
+          /> */}
+           <Route 
+         path='/pagination'
+         exact
+         render={(routerProps) => <PaginationPage {...routerProps} />}
+          />
 
         </Switch>
         <Footer />

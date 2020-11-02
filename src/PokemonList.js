@@ -5,7 +5,7 @@ import PokemonItem from './PokemonItem.js';
 export default class PokemonList extends Component {
     render() {
        
-   
+   //WRAP ENTIRE POKEMON LIST IN A LIST TO USE ON CLICK LINKING TO THE DETAILS PAGE!!!!! PUT TELM
      return (
         <div className='PokemonList'>
         {

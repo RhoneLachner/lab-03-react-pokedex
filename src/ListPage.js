@@ -22,15 +22,22 @@ export default class ListPage extends React.Component {
         count: 1
     }
     
-    componentDidMount = async () => {
-        this.fetchPokemon()
-    }
+  
     fetchPokemon = async () => {
         const data = await fetch.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.pageNumber}&perPage=20&pokemon=${this.state.searchTerm}&sort=${this.state.description}&direction=${this.state.order}
         `);
-        this.setState({ list : data.body.results }) 
+        this.setState({ list: data.body.results }) 
+
+
+        this.setState({
+          list: data.body.results,
+          count: data.body.count
+        })
     }
 
+    componentDidMount = async () => {
+      this.fetchPokemon()
+  }
 
     handleSearchChange = e => {
         this.setState({
@@ -96,16 +103,16 @@ export default class ListPage extends React.Component {
                 {this.state.count} total pokemon in query 
             </div>
             {
-             <button 
-                disabled={this.state.pageNumber === 1} 
-                onClick={this.handleDecrement}>
+              this.state.pageNumber !== 1 &&
+             <button onClick={this.handleDecrement}>
                 Prev
             </button>
             }
             {
+              this.state.pageNumber !== Math.ceil(this.state.count / 20) &&
             <button 
                 onClick={this.handleIncrement} 
-                disabled={this.state.pageNumber === Math.ceil(this.state.count / 20)}>
+                 >
                 Next
             </button>
             }

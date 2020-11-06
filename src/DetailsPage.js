@@ -42,7 +42,7 @@ export default class DetailsPage extends Component {
                 defense={this.state.list.defense}
                 />
 
-                {
+                {/* {
                 this.state.pokemon.length === 0 
                 ? 'loading!'
                 : this.state.list.map(list => <div key={list.pokemon}>
@@ -52,7 +52,7 @@ export default class DetailsPage extends Component {
                     <p>{list.attack}</p>
                     <p>{list.defense}</p>
                     </div>)
-                }
+                } */}
                 </div>
         )
     }
